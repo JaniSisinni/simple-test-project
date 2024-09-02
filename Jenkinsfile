@@ -21,7 +21,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Run the unit tests
-                bat 'python3 -m unittest test_hello.py'
+                bat 'python -m unittest test_hello.py'
             }
         }
 
