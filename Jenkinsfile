@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Simulate deployment by copying the script to a deploy directory
-                bat 'mkdir deploy && copy hello.py deploy/'
+                bat 'if not exist deploy mkdir deploy && copy hello.py deploy/'
                 echo 'Deployment complete.'
             }
         }
