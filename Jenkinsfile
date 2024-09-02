@@ -21,14 +21,14 @@ pipeline {
         stage('Test') {
             steps {
                 // Run the unit tests
-                sh 'python3 -m unittest test_hello.py'
+                bat 'python3 -m unittest test_hello.py'
             }
         }
 
         stage('Deploy') {
             steps {
                 // Simulate deployment by copying the script to a deploy directory
-                sh 'mkdir -p deploy && cp hello.py deploy/'
+                bat 'mkdir -p deploy && cp hello.py deploy/'
                 echo 'Deployment complete.'
             }
         }
